@@ -5,7 +5,6 @@ import Controllers from './components/Controllers/Controllers';
 import AddChildController from './components/Controllers/AddChildController';
 import ToggleThemeController from './components/Controllers/ToggleThemeController';
 import ThemeProvider from './components/Providers/ThemeProvider';
-import ThemeContext from './components/Providers/ThemeContext';
 import './App.css';
 
 function App() {
@@ -14,9 +13,7 @@ function App() {
   return (
     <div className="App">
         <ThemeProvider theme={theme}>
-            <ThemeContext.Consumer>
-                {theme => <Header theme={theme}/>}
-            </ThemeContext.Consumer>
+            <Header />
             <Controllers>
                 <AddChildController />
                 <ToggleThemeController toggleThemeClick={setTheme}/>
