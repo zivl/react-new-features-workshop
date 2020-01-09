@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import ThemeContext from "../Providers/ThemeContext";
-import { API } from '../../database/api'
+import React, { useState } from 'react'
 
 const Child = ({child, index}) => {
   const [checkedIn, setCheckedIn] = useState(false)
