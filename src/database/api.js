@@ -1,4 +1,3 @@
-let kids = []
 /**
  * Child Type
 const Child = {
@@ -13,23 +12,55 @@ const Child = {
         id,
         name,
         phone,
-    },
-    profilePicture,
+    }
 }
  */
+let kids = [
+  {
+    id: '123',
+    name: 'Ziv Levy',
+    parentA: {
+      name: 'Angelina'
+    },
+    parentB: {
+      name: 'Brad'
+    }
+  },
+  {
+    id: '456',
+    name: 'Assaf Gannor',
+    parentA: {
+      name: 'Jennifer'
+    },
+    parentB: {
+      name: 'Like Mike'
+    }
+  },
+  {
+    id: '789',
+    name: 'Yael Zaritsky',
+    parentA: {
+      name: 'Monica'
+    },
+    parentB: {
+      name: 'Chandler'
+    }
+  }
+]
+
 const getChildrenList = () => [...kids]
 const addChild = child => kids.push(child)
-const removeChild = id => kids = kids.filter(k => k.id !== id)
+const removeChild = id => (kids = kids.filter(k => k.id !== id))
 const updateChildInfo = child => {
-    kids = kids.filter(k => k.id !== child.id)
-    kids.push(child)
+  kids = kids.filter(k => k.id !== child.id)
+  kids.push(child)
 }
-const resetList = () => kids = []
+const resetList = () => (kids = [])
 
 export const API = {
-    getChildrenList,
-    addChild,
-    removeChild,
-    updateChildInfo,
-    resetList
+  getChildrenList,
+  addChild,
+  removeChild,
+  updateChildInfo,
+  resetList
 }
