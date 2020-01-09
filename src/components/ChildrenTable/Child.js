@@ -29,7 +29,7 @@ const Child = ({child, index}) => {
                         <a className="dropdown-item" href="#" onClick={() => notifications.notifyParentMissingChild(child)}>
                             Notify parent for missing child
                         </a>
-                        <a className="dropdown-item" href="#" onClick={() => notifications.notifyDayCareManager('WHAAAT')}>
+                        <a className="dropdown-item" href="#" onClick={() => notifications.notifyDayCareStaff('WHAAAT')}>
                             Notify day care staff
                         </a>
                         <a className="dropdown-item" href="#" onClick={() => notifications.notifyDayCareManager('WHAAAT')}>
