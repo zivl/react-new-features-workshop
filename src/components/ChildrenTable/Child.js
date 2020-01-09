@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { notifications } from '../../services/notifications'
 
 const Child = ({child, index}) => {
   const [checkedIn, setCheckedIn] = useState(false)
@@ -25,13 +26,13 @@ const Child = ({child, index}) => {
                         Notify
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#" onClick={() => notifications.notifyParentMissingChild(child)}>
                             Notify parent for missing child
                         </a>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#" onClick={() => notifications.notifyDayCareManager('WHAAAT')}>
                             Notify day care staff
                         </a>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#" onClick={() => notifications.notifyDayCareManager('WHAAAT')}>
                             Notify general message
                         </a>
                     </div>
