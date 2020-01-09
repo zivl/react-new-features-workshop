@@ -16,16 +16,21 @@ const App = () => {
   const onChangeFontColorTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   }
-  
-  const onAddChild = child => {
-      API.addChild(child);
-      setChilds(API.getChildrenList())
+
+  async function getChildrenList() {
+    const childs = await API.getChildrenList()
+    setChilds(childs)
   }
 
+  useEffect ( () => {
+    getChildrenList()
+  }, [])
+  
+  const onAddChild = async child => {
+      await API.addChild(child);
+      getChildrenList()
+  }
 
-  useEffect(() => {
-      setChilds(API.getChildrenList())
-  }, []);
 
   // render() {
     return (
