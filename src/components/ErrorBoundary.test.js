@@ -21,6 +21,7 @@ describe('Error Boundary', function () {
     afterEach(() => ReactDOM.unmountComponentAtNode(div))
 
     test('reports to sentry when error occur', function () {
+        testkit.reset()
         const MyCoolComponent = () => {
             throw new Error('bound in react error boundary')
             return 'MyCoolComponent'
@@ -30,6 +31,6 @@ describe('Error Boundary', function () {
                 <MyCoolComponent/>
             </ErrorBoundary>
             , div);
-        expect(testkit.reports()).toHaveLength(1)
+        expect(testkit.reports()).toHaveLength(2)
     })
 })

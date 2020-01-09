@@ -1,8 +1,8 @@
 const notify = msg => console.info(msg)
 
 const notifyParent = (child, message) => {
-    notify(`Hello ${child.parentA}, ${message}`)
-    notify(`Hello ${child.parentB}, ${message}`)
+    notify(`Hello ${child.parentA.name}, ${message}`)
+    notify(`Hello ${child.parentB.name}, ${message}`)
 }
 
 const notifyParentMissingChild = child =>
