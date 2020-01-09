@@ -48,14 +48,14 @@ let kids = [
   }
 ]
 
-const getChildrenList = () => [...kids]
-const addChild = child => kids.push(child)
+const getChildrenList = () => Promise.resolve([...kids])
+const addChild = child => Promise.resolve(kids.push(child))
 const removeChild = id => (kids = kids.filter(k => k.id !== id))
 const updateChildInfo = child => {
   kids = kids.filter(k => k.id !== child.id)
-  kids.push(child)
+  return Promise.resolve(kids.push(child))
 }
-const resetList = () => (kids = [])
+const resetList = () => Promise.resolve((kids = []))
 
 export const API = {
   getChildrenList,
