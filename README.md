@@ -27,13 +27,13 @@ Use [Sentry-Testkit](https://wix.github.io/sentry-testkit/#/) to make `ErrorBoun
 ### Step 2: Context
 Use React's `Context API` to pass the following parameters as context to consuming components:
 1. Font Color Theme - create a toggle controller for the user to set their own favorite theme for text colors.
-2. Sentry reference - create a `Sentry` component which passes sentry as a context parameter for every component to use.
+2. TDB
 
 
 ### Step 3: Hooks
 We will use `useState` and `useEffect` hooks to implement the following functionality:
 * List of children with the following columns:
-  * Image
+  * "Named Avatar"
   * Name
   * Check-in Status
   * Notify (dropdown actions):
