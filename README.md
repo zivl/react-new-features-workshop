@@ -31,7 +31,7 @@ Use React's `Context API` to pass the following parameters as context to consumi
 ### Step 3: Hooks
 We will use `useState` and `useEffect` hooks to implement the following functionality:
 * List of children with the following columns:
-  * Image
+  * "Named Avatar"
   * Name
   * Check-in Status
   * Notify (dropdown actions):
