@@ -25,7 +25,7 @@ Use [Sentry-Testkit](https://wix.github.io/sentry-testkit/#/) to make `ErrorBoun
 ### Step 2: Context
 Use React's `Context API` to pass the following parameters as context to consuming components:
 1. Font Color Theme - create a toggle controller for the user to set her own favorite theme for text colors.
-2. sentry reference - create a `Sentry` components which passes sentry as a context parameter for every component to use.
+2. TDB
 
 
 ### Step 3: Hooks
