@@ -20,7 +20,7 @@ Note that we're not on UI/UX workshop, so we shouldn't spend too much time worki
 
 ### Step 1: Error Boundaries and Reporting
 Integrate with [Sentry](https://sentry.io) and use React's `Error Boundaries` solution to report rendering errors.
-Use [Sentry-Testkit](https://wix.github.io/sentry-testkit/#/) to make `ErrorBoundary.test.js` work!
+Use [Sentry-Testkit](https://zivl.github.io/sentry-testkit/#/) to make `ErrorBoundary.test.js` work!
 > Pay attention that `sentry-testkit` is already configured in the test.
 
 
